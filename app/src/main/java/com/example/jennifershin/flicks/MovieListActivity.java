@@ -123,11 +123,9 @@ public class MovieListActivity extends AppCompatActivity {
                 // get the image base url
                 try {
                     config = new Config(response);
-                    Log.i(TAG,
-                            String.format("Loaded configuration with imageBaseUrl %s and posterSize %s",
-                                    config.getImageBaseUrl();
-                                    config.getPosterSize());
+                    Log.i(TAG, String.format("Loaded configuration with imageBaseUrl %s and posterSize %s", config.getImageBaseUrl(), config.getPosterSize()));
                     // pass config to adapter
+                    adapter.setConfig(config);
                     // get the now playing movie list
                     getNowPlaying();
                 } catch (JSONException e) {
